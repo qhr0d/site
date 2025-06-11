@@ -1,0 +1,57 @@
+.main {
+    background-color: #FFFFFF;
+}
+.blue-1 {
+    background-color: #a9b5df;
+}
+.blue-2 {
+    background-color: #7886c7;
+}
+.blue-3 {
+    background-color: #2d336b;
+}
+.text-main {
+    color: #fff2f2;
+}
+.text-blue-1 {
+    color: #a9b5df;
+}
+.text-blue-2 {
+    color: #7886c7;
+}
+.text-blue-3 {
+    color: #2d336b;
+}
+.border-blue-1 {
+    border-color: #a9b5df;
+}
+
+.gradient-background {
+    background: linear-gradient(300deg, #2d336b, #7886c7, #a9b5df);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.icon-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+#weights, #results, #diagrams {
+    display: none;
+}

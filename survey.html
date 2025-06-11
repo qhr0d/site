@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Опитування</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body class="main pt-5 mt-4">
+
+  <!-- Navbar -->
+  <section id="navbar">
+    <header class="p-3 blue-3 fixed-top">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-main text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-shield" viewBox="0 0 16 16">
+              <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+            </svg>
+          </a>          
+  
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="./index.html" class="nav-link px-2 text-main">Головна</a></li>
+            <li><a href="./survey.html" class="nav-link px-2 text-blue-1">Опитування</a></li>
+            <li><a href="./contact.html" class="nav-link px-2 text-main">Контакти</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <h1 class="container pt-5 py-lg-4 fw-bold text-blue-3">Оцінювання кіберрезильєнтності енергопідприємства</h1>
+  <hr class="container"/>
+
+    <!-- FAQ -->
+    <section id="info">
+        <div class="container text-blue-3">
+            <h2 class="fw-bold">Інструкція</h2>
+            <p class="fs-5 col-md-8 lead"><strong>Перед початком опитування уважно ознайомтеся з цією інструкцією.</strong> Вона допоможе Вам правильно пройти опитування та отримати точні результати.</p>
+            <h3 class="fw-bold">1. Ознайомлення з абревіатурами</h3>
+            <p class="fs-5 col-md-8 lead">Перед проходженням опитування <strong>необхідно ознайомитися з абревіатурами</strong>, які використовуються у питаннях. Це допоможе Вам краще зрозуміти зміст тверджень.</p>
+            <h3 class="fw-bold">2. Вибір способу проходження опитування</h3>
+            <p class="fs-5 col-md-8 lead">Оберіть один із двох способів проходження опитування:</p>
+            <ul class="fs-5 col-md-8 lead">
+              <li><strong>З вагами від експертів.</strong> У цьому режимі всі ваги для стратегічних і доменних метрик встановлені на основі <strong>експертного оцінювання</strong>*. Вам не потрібно вводити жодних додаткових даних.</li>
+              <li><strong>Задати ваги самостійно.</strong> У цьому режимі ви зможете <strong>самостійно</strong> ввести ваги для стратегічних і доменних метрик, що дозволить налаштувати опитування під специфіку Вашого підприємства.</li>
+            </ul>
+            <p class="fs-5 col-md-8 lead">*<strong>Експертне оцінювання</strong> — це метод, при якому ваги для метрик встановлюються на основі думок і досвіду фахівців у галузі кібербезпеки та енергетики.</p>
+            <h3 class="fw-bold">3. Введення ваг (лише для режиму "Задати ваги самостійно")</h3>
+            <p class="fs-5 col-md-8 lead">Якщо Ви обрали <strong>задати ваги самостійно</strong>, Вам потрібно буде ввести ваги для:</p>
+            <ul class="fs-5 col-md-8 lead">
+              <li><strong>Стратегічних метрик (R1, R2, R3, R4).</strong> Введіть ваги для кожної з чотирьох метрик (Міцність, Надлишковість, Винахідливість, Швидкість реагування). <strong>Сума цих ваг повинна дорівнювати 1.</strong></li>
+              <li><strong>Доменних метрик (Фізичний, Організаційний, Технічний).</strong> Введіть ваги для кожної з трьох метрик. <strong>Сума цих ваг повинна дорівнювати 1.</strong></li>
+            </ul>
+            <p class="fs-5 col-md-8 lead"><strong>Важливо:</strong> Ваги для <strong>30 операційних метрик</strong> завжди беруться від експертів, незалежно від обраного режиму. Вам не потрібно вводити ці ваги задля швидкості та зручності проходження опитування.</p>
+            <h3 class="fw-bold">4. Проходження опитування</h3>
+            <p class="fs-5 col-md-8 lead">Оцініть кіберрезильєнтність (кібервідмовостійкість) Вашого енергопідприємства за <strong>8 розділами</strong>: фізична безпека, мережева безпека, контроль доступу, надійність і резервування, моніторинг і виявлення, реагування на інциденти, організаційні політики, оновлення та захист.</p>
+            <p class="fs-5 col-md-8 lead">Для кожного твердження оберіть одну з опцій:</p>
+            <ul class="fs-5 col-md-8 lead">
+              <li><strong>Повністю згоден</strong> (100% згоди);</li>
+              <li><strong>Переважно згоден</strong> (75% згоди);</li>
+              <li><strong>Частково згоден, частково не згоден</strong> (50% згоди);</li>
+              <li><strong>Переважно не згоден</strong> (25% згоди);</li>
+              <li><strong>Повністю не згоден</strong> (0% згоди).</li>
+            </ul>
+            <p class="fs-5 col-md-8 lead"><strong>Порада:</strong> Для максимально точних результатів відповідайте чесно за фактичним станом у компанії.</p>
+            <h3 class="fw-bold">5. Результати опитування</h3>
+            <p class="fs-5 col-md-8 lead">Після завершення опитування ви отримаєте:</p>
+            <ul class="fs-5 col-md-8 lead">
+              <li><strong>Загальну оцінку кіберрезильєнтності</strong> Вашого енергетичного підприємства;</li>
+              <li><strong>Радарні діаграми</strong>: Показують оцінки операційних метрик для кожної стратегічної метрики (Міцність, Надлишковість, Винахідливість, Швидкість реагування) у відповідних доменах;</li>
+              <li><strong>Кругову діаграму</strong>: Ілюструє розподіл стратегічних метрик на основі Ваших відповідей;</li>
+              <li><strong>Стовпчикову діаграму</strong>: Відображає оцінки доменних метрик (Фізичний, Організаційний, Технічний) для кожної стратегічної метрики.</li>
+            </ul>
+        </div>
+    </section>
+    <hr class="container"/>
+
+    <!-- Abbreviations -->
+     <section id="abbrv">
+      <div class="container text-blue-3">
+        <h2 class="fw-bold">Абревіатури</h2>
+        <ul class="fs-5 col-md-8 lead">
+          <li>ICS — Industrial Control System (Автоматизована система керування);</li>
+          <li>SCADA — Supervisory Control and Data Acquisition (Система диспетчерського контролю та збору даних);</li>
+          <li>WAMS — Wide Area Monitoring System (Система безперервного виміру та реєстрації параметрів роботи);</li>
+          <li>HMI — Human-Machine Interface (Людино-машинний інтерфейс);</li>
+          <li>PLC — Programmable Logic Controller (Програмований логічний контролер);</li>
+          <li>RTU — Remote Terminal Unit (Віддалений термінальний пристрій);</li>
+          <li>PMU — Phasor Measurement Unit (Фазовий вимірювальний пристрій);</li>
+          <li>PDC — Phasor Data Concentrator (Концентратор фазових даних);</li>
+          <li>RBAC — Role-Based Access Control (Рольове керування доступом);</li>
+          <li>SOC — Security Operations Center (Операційний центр кібербезпеки).</li>
+        </ul>
+      </div>
+     </section>
+     <hr class="container"/>
+
+  <!-- Вибір способу проходження опитування -->
+   <section id="choice">
+      <div class="container mt-4 form-group mb-4 text-blue-3">
+        <h2 class="fw-bold">Оберіть спосіб проходження опитування:</h2>
+        <div>
+            <input type="radio" id="expert-weights" name="weights-choice" value="expert">
+            <label for="expert-weights" class="fs-5 col-md-8 lead">Бажаю пройти опитування з вагами від експертів</label>
+        </div>
+        <div>
+            <input type="radio" id="custom-weights" name="weights-choice" value="custom">
+            <label for="custom-weights" class="fs-5 col-md-8 lead">Бажаю задати ваги самому</label>
+        </div>
+        <button id="proceed-button" class="btn blue-2 px-5">Продовжити</button>
+      </div>
+   </section>
+   <hr class="container"/>
+
+  <!-- Таблиця для стратегічних метрик -->
+   <section id="weights">
+    <div class="container mt-4 text-blue-3" id="strategic-weights-table">
+      <h2 class="fw-bold">Введіть ваги для стратегічних метрик:</h2>
+      <p class="lead">Сума ваг для метрик Міцність (R1), Надлишковість (R2), Винахідливість (R3) та Швидкість реагування (R4) повинна дорівнювати 1.</p>
+      <table class="table table-bordered border-blue-1 lead text-blue-3">
+        <colgroup>
+          <col style="width: 20%">
+          <col style="width: 70%">
+          <col style="width: 10%">
+        </colgroup>
+          <thead class="d-none d-md-table-header-group">
+              <tr>
+                  <th>Метрика</th>
+                  <th>Пояснення</th>
+                  <th>Вага</th>
+              </tr>
+          </thead class="text-blue-3">
+          <tbody>
+              <!-- Стратегічні метрики -->
+              <tr>
+                  <td>Міцність (R1)</td>
+                  <td>Міцність (robustness) – це здатність системи продовжувати виконувати свої безпосередні функції без значного/повного зниження рівня обслуговування під час кібератак або несподіваних змін.</td>
+                  <td><input type="number" step="0.01" min="0" max="1" name="R1-weight" class="form-control" required></td>
+              </tr>
+              <tr>
+                  <td>Надлишковість (R2)</td>
+                  <td>Надлишковість (redundancy) – це наявність холодних або гарячих резервних копій та реплікацій (програмного забезпечення) та дубльованих ресурсів (обладнання, каналів зв’язку, даних), які можуть замістити пошкоджені елементи.</td>
+                  <td><input type="number" step="0.01" min="0" max="1" name="R2-weight" class="form-control" required></td>
+              </tr>
+              <tr>
+                  <td>Винахідливість (R3)</td>
+                  <td>Винахідливість (resourcefulness) – здатність організації ефективно і своєчасно моніторити, виявляти, аналізувати та комбінувати наявні ресурси для протидії новим кібератакам.</td>
+                  <td><input type="number" step="0.01" min="0" max="1" name="R3-weight" class="form-control" required></td>
+              </tr>
+              <tr>
+                  <td>Швидкість реагування (R4)</td>
+                  <td>Швидкість реагування (rapidity) – це здатність системи швидко виявляти інциденти та відновлювати нормальну роботу після збою або кібератаки.</td>
+                  <td><input type="number" step="0.01" min="0" max="1" name="R4-weight" class="form-control" required></td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+
+    <div class="container mt-4 text-blue-3" id="domain-weights-table">
+      <h2 class="fw-bold">Введіть ваги для доменних метрик:</h2>
+      <p class="lead">Сума ваг для Фізичного, Організаційного та Технічного доменів повинна дорівнювати 1.</p>
+      <table class="table table-bordered border-blue-1 lead text-blue-3">
+        <colgroup>
+          <col style="width: 20%">
+          <col style="width: 70%">
+          <col style="width: 10%">
+        </colgroup>
+          <thead class="d-none d-md-table-header-group">
+              <tr>
+                  <th>Метрика</th>
+                  <th>Пояснення</th>
+                  <th>Вага</th>
+              </tr>
+          </thead class="text-blue-3">
+          <tbody>
+            <tr>
+                <td>Фізичний домен</td>
+                <td>Охоплює аспекти безпеки та витривалості фізичної інфраструктури (обладнання, пристрої, мережеві елементи, інженерні системи та ін.).</td>
+                <td><input type="number" step="0.01" min="0" max="1" name="Physical-weight" class="form-control" required></td>
+            </tr>
+            <tr>
+                <td>Організаційний домен</td>
+                <td>Фокусується на управлінських, процедурних і кадрових аспектах.</td>
+                <td><input type="number" step="0.01" min="0" max="1" name="Organizational-weight" class="form-control" required></td>
+            </tr>
+            <tr>
+                <td>Технічний домен</td>
+                <td>Охоплює програмне та апаратне забезпечення, мережі та системи.</td>
+                <td><input type="number" step="0.01" min="0" max="1" name="Technical-weight" class="form-control" required></td>
+            </tr>
+          </tbody>
+      </table>
+      <button type="submit" id="save-weights" class="btn blue-2 px-5">Зберегти ваги</button>
+    </div>
+    <hr class="container"/>
+   </section>
+  
+
+  <!-- Survey -->
+  <section id="survey">
+    <div class="container mt-4 text-blue-3">
+      <form>
+        <!-- 1. Фізична безпека -->
+        <div class="mb-5">
+          <h3 class="fw-bold"><strong>1.</strong> Фізична безпека</h3>
+
+          <!-- 1.1 -->
+          <div class="mt-4">
+            <p class="lead"><strong>1.1:</strong> У нашій енергокомпанії фізичний доступ до об’єктів (підстанцій, диспетчерських центрів тощо) суворо контролюється (наприклад, за допомогою пропускних систем, біометрії).</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_1" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_1" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_1" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_1" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_1" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 1.2 -->
+          <div class="mt-4">
+            <p class="lead"><strong>1.2:</strong> Резервні датчики та виконавчі пристрої критичних підстанцій розміщені в різних фізичних локаціях, що мінімізує ризик одночасної відмови всього класу обладнання.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_2" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_2" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_2" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_2" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_2" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 1.3 -->
+          <div class="mt-4">
+            <p class="lead"><strong>1.3:</strong> Ключові елементи енергосистеми знаходяться під постійним фізичним наглядом (відеоспостереженням, сенсорними сигналами).</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_3" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_3" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_3" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_3" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_3" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 1.4 -->
+          <div class="mt-4">
+            <p class="lead"><strong>1.4:</strong> У разі надзвичайної ситуації існує чітка процедура швидкого фізичного доступу аварійних груп до критичного обладнання (швидке відмикання дверей, ключі резервного доступу тощо).</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_4" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_4" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_4" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_4" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q1_4" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <hr class="container"/>
+
+        <!-- 2. Мережева безпека -->
+        <div class="mb-5">
+          <h3 class="fw-bold"><strong>2.</strong> Мережева безпека</h3>
+
+          <!-- 2.1 -->
+          <div class="mt-4">
+            <p class="lead"><strong>2.1:</strong> Мережі промислового контролю (SCADA/WAMS) відокремлені від корпоративних мереж за допомогою сегментації (VLAN, міжмережеві екрани тощо).</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_1" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_1" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_1" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_1" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_1" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 2.2 -->
+          <div class="mt-4">
+            <p class="lead"><strong>2.2:</strong> Уся комунікація між пристроями енергосистеми (WAMS-SCADA, PMU-PDC тощо) захищена за допомогою шифрування та криптографічної аутентифікації.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_2" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_2" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_2" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_2" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_2" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 2.3 -->
+          <div class="mt-4">
+            <p class="lead"><strong>2.3:</strong> Для мережевих каналів SCADA запроваджено резервні канали з QoS-пріоритезацією трафіку управління та тривожних повідомлень, щоб забезпечити їх доставку навіть у разі відмови основної мережі.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_3" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_3" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_3" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_3" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q2_3" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <hr class="container"/>
+
+        <!-- 3. Контроль доступу -->
+        <div class="mb-5">
+          <h3 class="fw-bold"><strong>3.</strong> Контроль доступу</h3>
+
+          <!-- 3.1 -->
+          <div class="mt-4">
+            <p class="lead"><strong>3.1:</strong> Згідно корпоративної політики безпеки всі співробітники мають лише ті права доступу, які відповідають їхнім ролям (RBAC), і не можуть змінювати конфігурації енергосистем поза своїми повноваженнями.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q3_1" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q3_1" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q3_1" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q3_1" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q3_1" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 3.2 -->
+          <div class="mt-4">
+            <p class="lead"><strong>3.2:</strong> Доступ до HMI/EWS/PDC/SCADA-серверів та інших критичних ресурсів вимагає мультифакторної аутентифікації з часовими обмеженнями сесій та суворих політик паролів.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q3_2" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q3_2" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q3_2" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q3_2" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q3_2" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <hr class="container"/>
+
+        <!-- 4. Надійність і резервування -->
+        <div class="mb-5">
+          <h3 class="fw-bold"><strong>4.</strong> Надійність і резервування</h3>
+
+          <!-- 4.1 -->
+          <div class="mt-4">
+            <p class="lead"><strong>4.1:</strong> Критичне обладнання (PLC/RTU/PMU) дублюється у режимі гарячого резерву (hot-standby) для автоматичного переключення у разі відмови першого пристрою.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_1" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_1" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_1" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_1" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_1" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 4.2 -->
+          <div class="mt-4">
+            <p class="lead"><strong>4.2:</strong> Кожен критичний вузол енергосистеми має альтернативний канал зв’язку та резервне джерело живлення.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_2" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_2" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_2" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_2" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_2" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 4.3 -->
+          <div class="mt-4">
+            <p class="lead"><strong>4.3:</strong> Конфігураційні файли SCADA-серверів та критичних даних регулярно автоматично резервуються та зберігаються у безпечному місці.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_3" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_3" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_3" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_3" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_3" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 4.4 -->
+          <div class="mt-4">
+            <p class="lead"><strong>4.4:</strong> В енергосистемі використовуються пристрої RTU/PLC/PMU та ін. від кількох виробників задля зниження ризику однотипних вразливостей.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_4" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_4" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_4" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_4" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_4" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 4.5 -->
+          <div class="mt-4">
+            <p class="lead"><strong>4.5:</strong> Гарантується безперебійний та швидкий доступ до необхідного обладнання у будь-який час.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_5" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_5" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_5" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_5" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q4_5" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <hr class="container"/>
+
+        <!-- 5. Моніторинг і виявлення -->
+        <div class="mb-5">
+          <h3 class="fw-bold"><strong>5.</strong> Моніторинг і виявлення</h3>
+
+          <!-- 5.1 -->
+          <div class="mt-4">
+            <p class="lead"><strong>5.1:</strong> Ведеться детальне логування всіх команд в HMI, доступів до серверів SCADA/WAMS та змін у прошивках PLC/RTU і з’єднаннях PMU; ці журнали регулярно аналізуються для виявлення незвичних активностей.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_1" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_1" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_1" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_1" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_1" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 5.2 -->
+          <div class="mt-4">
+            <p class="lead"><strong>5.2:</strong> Працює централізований центр моніторингу безпеки (SOC), який збирає логи та події з усіх підстанцій та виконує їх кореляцію для оперативного виявлення загроз.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_2" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_2" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_2" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_2" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_2" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 5.3 -->
+          <div class="mt-4">
+            <p class="lead"><strong>5.3:</strong> У мережах SCADA/WAMS використовується система виявлення вторгнень з аналізом специфічних протоколів (наприклад, Modbus, DNP3) та аналізом аномалій трафіку.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_3" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_3" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_3" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_3" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_3" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 5.4 -->
+          <div class="mt-4">
+            <p class="lead"><strong>5.4:</strong> Усі інциденти безпеки документуються, а відповідні логи подій ретельно аналізуються для встановлення причин та ризиків їх повторення.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_4" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_4" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_4" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_4" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_4" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 5.5 -->
+          <div class="mt-4">
+            <p class="lead"><strong>5.5:</strong> Система автоматично застосовує заздалегідь налаштовані правила реагування при виявленні аномалій у SCADA/WAMS (наприклад, відключає компрометований компонент).</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_5" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_5" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_5" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_5" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q5_5" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <hr class="container"/>
+
+        <!-- 6. Реагування на інциденти та відновлення -->
+        <div class="mb-5">
+          <h3 class="fw-bold"><strong>6.</strong> Реагування на інциденти та відновлення</h3>
+
+          <!-- 6.1 -->
+          <div class="mt-4">
+            <p class="lead"><strong>6.1:</strong> У нашій компанії існують задокументовані плани та процедури дій на випадок кібератак та інших надзвичайних ситуацій з деталізованими кроками для кожного рівня (оператори, ІТ, керівництво).</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_1" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_1" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_1" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_1" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_1" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 6.2 -->
+          <div class="mt-4">
+            <p class="lead"><strong>6.2:</strong> Команди реагування на інциденти чітко сформовані з призначеними ролями, а відновлення систем після атаки відбувається згідно затверджених процедур.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_2" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_2" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_2" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_2" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_2" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 6.3 -->
+          <div class="mt-4">
+            <p class="lead"><strong>6.3:</strong> Після інциденту проводиться ретельний аналіз причин та наслідків (Root Cause Analysis) з подальшим оновленням політики безпеки та покращенням сценаріїв навчання персоналу.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_3" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_3" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_3" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_3" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_3" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 6.4 -->
+          <div class="mt-4">
+            <p class="lead"><strong>6.4:</strong> У нашій компанії діє система управління надзвичайними ситуаціями, що містить регламенти швидкого переключення диспетчерського центру на резервну локацію, евакуації персоналу при критичних інцидентах тощо.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_4" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_4" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_4" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_4" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_4" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 6.5 -->
+          <div class="mt-4">
+            <p class="lead"><strong>6.5:</strong> Негайно блокуються скомпрометовані облікові записи та розпочинається розслідування при підозрілих діях співробітників.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_5" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_5" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_5" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_5" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q6_5" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <hr class="container"/>
+
+        <!-- 7. Організаційні заходи та політики -->
+        <div class="mb-5">
+          <h3 class="fw-bold"><strong>7.</strong> Організаційні заходи та політики</h3>
+
+          <!-- 7.1 -->
+          <div class="mt-4">
+            <p class="lead"><strong>7.1:</strong> Поведінка співробітників моніториться для виявлення внутрішніх загроз та ризиків інсайдерів.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_1" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_1" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_1" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_1" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_1" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 7.2 -->
+          <div class="mt-4">
+            <p class="lead"><strong>7.2:</strong> Усі зміни конфігурацій SCADA/WAMS та глобальні оновлення ПЗ проходять формалізований процес з тестуванням у відокремленому середовищі та затвердженням згідно з політикою управління змінами.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_2" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_2" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_2" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_2" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_2" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 7.3 -->
+          <div class="mt-4">
+            <p class="lead"><strong>7.3:</strong> В установі налаштовані надійні канали внутрішнього зв’язку між диспетчерами, інженерами та керівництвом (рації, телекомунікації, чати) для оперативного обміну інформацією під час інцидентів.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_3" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_3" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_3" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_3" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_3" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 7.4 -->
+          <div class="mt-4">
+            <p class="lead"><strong>7.4:</strong> Персонал регулярно проходить навчання та тренінги з відпрацювання сценаріїв кібер- та інших  атак, щоб мати готові алгоритми реагування.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_4" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_4" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_4" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_4" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q7_4" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <hr class="container"/>
+
+        <!-- 8. Оновлення та захист систем -->
+        <div class="mb-5">
+          <h3 class="fw-bold"><strong>8.</strong> Оновлення та захист систем</h3>
+
+          <!-- 8.1 -->
+          <div class="mt-4">
+            <p class="lead"><strong>8.1:</strong> Критичні дані систем (бази даних SCADA, конфігурації системи тощо) зберігаються зашифрованими та доступні лише обмеженому колу авторизованих осіб.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q8_1" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q8_1" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q8_1" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q8_1" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q8_1" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 8.2 -->
+          <div class="mt-4">
+            <p class="lead"><strong>8.2:</strong> Програмне забезпечення та операційні системи критичних ресурсів регулярно оновлюються останніми патчами, що закривають відомі вразливості ICS.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered text-start text-md-center border-blue-1">
+                <thead class="d-none d-md-table-header-group">
+                  <tr>
+                    <th>Повністю згоден</th>
+                    <th>Переважно згоден</th>
+                    <th>Частково згоден, частково не згоден</th>
+                    <th>Переважно не згоден</th>
+                    <th>Повністю не згоден</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q8_2" value="5"> Повністю згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q8_2" value="4"> Переважно згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q8_2" value="3"> Частково згоден, частково не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q8_2" value="2"> Переважно не згоден
+                      </label>
+                    </td>
+                    <td class="d-block d-md-table-cell">
+                      <label class="text-blue-3">
+                        <input type="radio" name="q8_2" value="1"> Повністю не згоден
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <hr class="container"/>
+          <!-- Кнопка відправки -->
+          <div class="container">
+            <div class="text-center text-sm-start py-3">
+              <button type="submit" class="btn blue-2 px-5">Відправити відповіді</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="results" class="container mt-5"></section>
+  <div id="diagrams" class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <canvas id="radar-R1"></canvas>
+      </div>
+      <div class="col-md-6 mb-4">
+        <canvas id="radar-R2"></canvas>
+      </div>
+      <div class="col-md-6 mb-4">
+        <canvas id="radar-R3"></canvas>
+      </div>
+      <div class="col-md-6 mb-4">
+        <canvas id="radar-R4"></canvas>
+      </div>
+      <div class="col-md-6 mb-4">
+        <canvas id="strategic-pie" height="300"></canvas>
+      </div>
+      <div class="col-md-6 mb-4">
+        <canvas id="domain-bar" height="300"></canvas>
+      </div>
+    </div>
+  </div>
+  </section>
+  
+  <!-- Footer -->
+  <section id="footer">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-blue-3 text-decoration-none lh-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-shield" viewBox="0 0 16 16">
+              <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+            </svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-blue-3">© 2025 Cyber Resilience</span>
+        </div>
+      </footer>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./scripts/compute.js"></script>
+</body>
+
+</html>
