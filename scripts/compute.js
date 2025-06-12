@@ -262,28 +262,28 @@ function displayResults(data) {
   const container = document.getElementById('results');
   container.innerHTML = '';
 
-  let html = `<h3 class="fw-bold text-blue-3 mt-4">Результати обчислення кіберрезильєнтності</h3>`;
-  html += `<table class="table table-bordered mt-3">
-             <thead>
-               <tr>
-                 <th>Стратегічна (Ri) метрика</th>
-                 <th>Значення R<sub>i</sub> (1–5)</th>
-                 <th>Нормалізоване R<sub>iN</sub> (0–1)</th>
-               </tr>
-             </thead>
-             <tbody>`;
+  // let html = `<h3 class="fw-bold text-blue-3 mt-4">Результати обчислення кіберрезильєнтності</h3>`;
+  // html += `<table class="table table-bordered mt-3">
+  //            <thead>
+  //              <tr>
+  //                <th>Стратегічна (Ri) метрика</th>
+  //                <th>Значення R<sub>i</sub> (1–5)</th>
+  //                <th>Нормалізоване R<sub>iN</sub> (0–1)</th>
+  //              </tr>
+  //            </thead>
+  //            <tbody>`;
 
-  for (let Rkey of Object.keys(data.allCi)) {
-    html += `<tr>
-               <td>${Rkey}</td>
-               <td>${data.allCi[Rkey].toFixed(3)}</td>
-               <td>${data.allCiN[Rkey].toFixed(3)}</td>
-             </tr>`;
-  }
+  // for (let Rkey of Object.keys(data.allCi)) {
+  //   html += `<tr>
+  //              <td>${Rkey}</td>
+  //              <td>${data.allCi[Rkey].toFixed(3)}</td>
+  //              <td>${data.allCiN[Rkey].toFixed(3)}</td>
+  //            </tr>`;
+  // }
 
-  html += `</tbody></table>`;
-  html += `<p class="fw-bold text-blue-3 mt-3">CSF (Critical Service Functionality): ${data.csf.toFixed(3)}</p>`;
-  html += `<p class="fw-bold text-blue-3 mt-3">Загальний рівень кіберрезильєнтності Вашого енергопідприємства R: ${data.resilienceR.toFixed(3)}</p>`;
+  // html += `</tbody></table>`;
+  // html += `<p class="fw-bold text-blue-3 mt-3">CSF (Critical Service Functionality): ${data.csf.toFixed(3)}</p>`;
+  const html = `<p class="fw-bold text-blue-3 mt-3">Загальний рівень кіберрезильєнтності Вашого енергопідприємства R: ${data.resilienceR.toFixed(3)}</p>`;
 
   container.innerHTML = html;
 }
