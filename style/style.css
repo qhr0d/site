@@ -52,6 +52,6 @@
     height: 40px;
 }
 
-#weights, #results, #diagrams {
+#weights, #results, #diagrams, #explanations {
     display: none;
 }
